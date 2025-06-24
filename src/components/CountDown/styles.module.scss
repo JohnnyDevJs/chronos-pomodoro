@@ -1,0 +1,8 @@
+@use '../../styles/theme' as *;
+
+.countdown {
+  font-weight: bold;
+  font-size: clamp(8rem, 25vw, 14rem);
+  text-align: center;
+  line-height: 1.2;
+}

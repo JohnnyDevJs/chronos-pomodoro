@@ -1,0 +1,76 @@
+.responsive-table {
+  overflow-x: auto;
+  border-radius: 0.8rem;
+
+  table {
+    width: 100%;
+    min-width: 64rem;
+    font-size: 1.6rem;
+    border-collapse: collapse;
+
+    th {
+      background-color: var(--gray-500);
+
+      &.th-sort {
+        cursor: pointer;
+        transition: all 0.4s;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        &:hover {
+          background-color: var(--gray-400);
+        }
+      }
+    }
+
+    td {
+      background-color: var(--gray-800);
+
+      .status-indicator-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        span {
+          &.status-indicator {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+          }
+
+          &#interrupt {
+            background-color: var(--warning);
+          }
+
+          &#abandoned {
+            background-color: var(--error);
+          }
+
+          &#inProgress {
+            background-color: var(--info);
+          }
+
+          &#complete {
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+      border-bottom: 0.2rem solid var(--gray-700);
+      text-align: left;
+      padding: 1.6rem;
+    }
+  }
+}
+
+.tasks-not-found {
+  text-align: center;
+}
